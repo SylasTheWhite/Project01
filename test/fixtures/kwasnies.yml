@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  imie: MyString
+  ilewypil: 1
+  czyjesttakbardzochorynajakiegowyglada: false
+
+two:
+  imie: MyString
+  ilewypil: 1
+  czyjesttakbardzochorynajakiegowyglada: false

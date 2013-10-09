@@ -1,0 +1,31 @@
+<h1>Listing kwasnies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Imie</th>
+      <th>Ilewypil</th>
+      <th>Czyjesttakbardzochorynajakiegowyglada</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kwasnies.each do |kwasny| %>
+      <tr>
+        <td><%= kwasny.imie %></td>
+        <td><%= kwasny.ilewypil %></td>
+        <td><%= kwasny.czyjesttakbardzochorynajakiegowyglada %></td>
+        <td><%= link_to 'Show', kwasny %></td>
+        <td><%= link_to 'Edit', edit_kwasny_path(kwasny) %></td>
+        <td><%= link_to 'Destroy', kwasny, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kwasny', new_kwasny_path %>

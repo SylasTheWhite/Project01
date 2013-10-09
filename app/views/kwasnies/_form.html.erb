@@ -1,0 +1,29 @@
+<%= form_for(@kwasny) do |f| %>
+  <% if @kwasny.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kwasny.errors.count, "error") %> prohibited this kwasny from being saved:</h2>
+
+      <ul>
+      <% @kwasny.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :imie %><br>
+    <%= f.text_field :imie %>
+  </div>
+  <div class="field">
+    <%= f.label :ilewypil %><br>
+    <%= f.number_field :ilewypil %>
+  </div>
+  <div class="field">
+    <%= f.label :czyjesttakbardzochorynajakiegowyglada %><br>
+    <%= f.check_box :czyjesttakbardzochorynajakiegowyglada %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
